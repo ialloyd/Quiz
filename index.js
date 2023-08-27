@@ -9,7 +9,7 @@ let counterflag = false;
 
 async function getData() {
 
-    let response = await fetch('https://opentdb.com/api.php?amount=10&category=18&difficulty=easy&type=multiple');
+    let response = await fetch('https://opentdb.com/api.php?amount=10&type=multiple');
     let result = await response.json();
     arr = result.results;
     showDataOnUI();
@@ -34,7 +34,6 @@ let selectOption = (event) => {
     if (event.target.textContent === correctAnswer) {
 
         counterflag = true;
-
 
     }
     else {
